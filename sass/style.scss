@@ -1,0 +1,362 @@
+@import "carga";
+@import "animaciones";
+@import "cursor";
+@import "variables";
+
+* {
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+  width: 0px;
+}
+
+@mixin cover {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin opacity {
+  opacity: 50%;
+  scale: 0.9;
+}
+@mixin contorno {
+  text-shadow:
+  4px 4px 0 $Principal,
+  -4px 4px 0 $Principal,
+  -4px -4px 0 $Principal,
+  4px -4px 0 $Principal;
+}
+
+@mixin contorno2 {
+  text-shadow:
+  2px 2px 0 $Principal,
+  -2px 2px 0 $Principal,
+  -2px -2px 0 $Principal,
+  2px -2px 0 $Principal;
+}
+.log_letra {
+  cursor: pointer;
+  @include contorno2;
+  transition: all 0.3s ease-in-out;
+}
+.log_letra:hover {
+  color: $Resalte2;
+}
+.ocultar {
+  opacity: 0;
+  scale: 0;
+}
+body {
+  background-color: $Fondo;
+  display: flex;
+  overflow: hidden;
+  #home {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: $Principal;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    transition: all 0.2s ease-in-out;
+    .view_cont {
+      width: 40%;
+      height: 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .view_log {
+        width: 100%;
+        height: 85%;
+        z-index: 50;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: $Letra1;
+        color: $Texto;
+        .log_letras {
+          width: 100%;
+          height: 70%; 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .log_letra {
+            cursor: pointer;
+            @include contorno;
+            transition: all 0.3s ease-in-out;
+          }
+          .log_letra:hover {
+            color: $Resalte2;
+          }
+          #log_letra_1 {
+            font-size: 18vh;
+          }
+          #log_letra_2 {
+            font-size: 13vh;
+            margin-left: -1.3vw;
+            margin-top: -3vh;
+          } 
+          #log_letra_3 {
+            font-size: 13vh;
+            margin-left: -1.3vw;
+            margin-top: 3vh;
+          }
+          #log_letra_4 {
+            font-size: 13vh;
+            margin-left: -.5vw;
+            margin-top: 2vh;
+          }
+        }
+        #log_letra_7 {
+          font-size: 1.2vh;
+          font-family: $Letra2;
+          letter-spacing: 0.25em;
+        }
+      }
+      .view_ghost {
+        width: 10%;
+        height: 20%;
+        z-index: 1;
+        margin-bottom: 13%;
+        margin-right: 17%;
+        position: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        animation: moverGhost 8s ease-in-out infinite;
+      }
+      .view_btn {
+        width: 100%;
+        height: 10%;
+        margin-top: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .btn_view {
+          width: 2.5rem;
+          height: 2.5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 100%;
+          border: none;
+          padding: 0;
+          margin: 0;
+          background-color: $Texto;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-image: url("../img/Logos/interfaces/icons/no_mostrar.png");
+        }
+        .btn_view:hover {
+          animation: mostrarPage 0s forwards;
+        }
+      }
+    }
+    #audio {
+      display: none;
+    }
+  }
+  header {
+    width: 10vw;
+    height: 100vh;
+    background-color: $Principal;
+    nav {
+      width: 100%;
+      height: 100%;
+      .logo {
+        .view_cont {
+          width: 100%;
+          height: 30%;
+          margin-top: 20%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          .view_log {
+            width: 100%;
+            height: 85%;
+            z-index: 50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: $Letra1;
+            color: $Texto;
+            .log_letras {
+              width: 100%;
+              height: 70%; 
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              #log_letra_1 {
+                font-size: 8vh;
+              }
+              #log_letra_2 {
+                font-size: 5vh;
+                margin-left: -.5vw;
+                margin-top: -2vh;
+              } 
+              #log_letra_3 {
+                font-size: 5vh;
+                margin-left: -.5vw;
+                margin-top: 1vh;
+              }
+              #log_letra_4 {
+                font-size: 5vh;
+                margin-left: -.3vw;
+                margin-top: 0vh;
+              }
+            }
+            #log_letra_7 {
+              font-size: .7vh;
+              font-family: $Letra2;
+              letter-spacing: 0.25em;
+            }
+          }
+          .view_ghost {
+            width: 5%;
+            height: 10%;
+            z-index: 1;
+            margin-bottom: 5%;
+            margin-right: 9%;
+            position: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            animation: moverGhost 8s ease-in-out infinite;
+          }
+        }
+      }
+      ul {
+        width: 100%;
+        height: 50%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        margin-top: 35%;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        li {
+          width: 30%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          button {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            background-color: $Transparente;
+            border: none;
+            justify-content: center;
+            align-items: center;
+            img {
+              @include cover;
+            }
+          }
+        }
+      }
+    }
+  }
+  main {
+    width: 90vw;
+    height: 100vh;
+    z-index: 1;
+    .pages {
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+    #pag1 {
+      .pag_cont {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        .proyecto {
+          width: 90%;
+          height: 90%;
+          display: flex;
+          background-color: $Principal;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          .proyecto_img {
+            width: 100%;
+            height: 80%;
+            a{
+              img {
+                @include cover;
+              }
+            }
+          }
+          .proyecto_info {
+            width: 100%;
+            height: 20%;
+            display: flex;
+            background-color: $Negro;
+            justify-content: space-between;
+            align-items: center;
+            .proyecto_info_text {
+              width: 70%;
+              height: 100%;
+              display: flex;
+              justify-content: start;
+              align-items: start;
+              flex-direction: column;
+              span {
+                font-family: $Letra2;
+                margin: 2%;
+                color: $Texto;
+                font-size: 2vh;
+              }
+              .proyecto_info_skills {
+                height: 35%;
+                margin: 2%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                  @include cover;
+                }
+              }
+            }
+            .proyecto_links {
+              width: 30%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 10%;
+              a {
+                height: 30%;
+                img {
+                  @include cover;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #pag2 {
+      width: 100%;
+      height: 100%;
+      justify-items: center;
+      align-items: center;
+    }
+    .agregar_dis {
+      display: flex;
+    }
+    .remover_dis {
+      display: none;
+    }
+  }
+}

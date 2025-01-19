@@ -1,0 +1,56 @@
+@import "variables";
+//preloader
+@keyframes loader {
+    0% { left: -100px }
+    100% { left: 110%; }
+  }
+@keyframes shadow {
+    50% {
+      transform: scale(1.2,1);
+    }
+  }
+  @keyframes animate {
+    17% { border-bottom-right-radius: 3px; }
+    25% { transform: translateY(9px) rotate(22.5deg); }
+    50% {
+      transform: translateY(18px) scale(1,.9) rotate(45deg) ;
+      border-bottom-right-radius: 40px;
+    }
+    75% { transform: translateY(9px) rotate(67.5deg); }
+    100% { transform: translateY(0) rotate(90deg); }
+  } 
+  @keyframes reolad {
+      0% {
+          transform: rotate(0deg);
+      }
+      100% {
+          transform: rotate(360deg);
+      }
+  }
+  @keyframes moverGhost {
+    0% {
+      transform: translateX(0);
+      background-image: url("../img/mascotas/ghost_4.png");
+    }
+    49% {
+      transform: translateX(175%) translateY(27%);
+      background-image: url("../img/mascotas/ghost_4.png");
+    }
+    50% {
+      transform: translateX(175%) translateY(27%);
+      background-image: url("../img/mascotas/ghost_4.5.png");
+    }
+    100% {
+      transform: translateX(0);
+      background-image: url("../img/mascotas/ghost_4.5.png");
+      z-index: 100;
+    }
+  }
+  @keyframes mostrarPage {
+    0% {
+      background-image: url("../img/Logos/interfaces/icons/no_mostrar.png");
+    }
+    100% {
+      background-image: url("../img/Logos/interfaces/icons/mostrar.png");
+    }
+  }

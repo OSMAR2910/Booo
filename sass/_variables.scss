@@ -1,0 +1,30 @@
+//Colres
+$Blanco: #f2f0ed;
+$Negro: #0d0d0d;
+$Transparente: rgba(0, 0, 0, 0);
+//Colres DefaultColor 
+    $Principal: #171616;
+    $Secundario: #7e1d1e;
+    $Resalte: #261437;
+    $Resalte2: #3e2356 ;
+    $Resalte3: #621819;
+    $Fondo: #f8f4e8; 
+    $Texto: #f8f4e8;
+    
+///ipos de letra
+@font-face {
+    font-family: 'Null';
+    src: url(/fonts/Null.otf);
+    font-style: normal;
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: 'OpenSauceOne';
+    src: url(/fonts/opens/OpenSauceOne-Black.ttf);
+    font-style: normal;
+    font-weight: normal;
+  }
+
+//Letra
+$Letra1: 'Null';
+$Letra2: 'OpenSauceOne';

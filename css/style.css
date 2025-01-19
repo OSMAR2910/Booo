@@ -1,0 +1,613 @@
+@font-face {
+  font-family: "Null";
+  src: url(/fonts/Null.otf);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "OpenSauceOne";
+  src: url(/fonts/opens/OpenSauceOne-Black.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Null";
+  src: url(/fonts/Null.otf);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "OpenSauceOne";
+  src: url(/fonts/opens/OpenSauceOne-Black.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+@keyframes loader {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 110%;
+  }
+}
+@keyframes shadow {
+  50% {
+    transform: scale(1.2, 1);
+  }
+}
+@keyframes animate {
+  17% {
+    border-bottom-right-radius: 3px;
+  }
+  25% {
+    transform: translateY(9px) rotate(22.5deg);
+  }
+  50% {
+    transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+    border-bottom-right-radius: 40px;
+  }
+  75% {
+    transform: translateY(9px) rotate(67.5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+@keyframes reolad {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes moverGhost {
+  0% {
+    transform: translateX(0);
+    background-image: url("../img/mascotas/ghost_4.png");
+  }
+  49% {
+    transform: translateX(175%) translateY(27%);
+    background-image: url("../img/mascotas/ghost_4.png");
+  }
+  50% {
+    transform: translateX(175%) translateY(27%);
+    background-image: url("../img/mascotas/ghost_4.5.png");
+  }
+  100% {
+    transform: translateX(0);
+    background-image: url("../img/mascotas/ghost_4.5.png");
+    z-index: 100;
+  }
+}
+@keyframes mostrarPage {
+  0% {
+    background-image: url("../img/Logos/interfaces/icons/no_mostrar.png");
+  }
+  100% {
+    background-image: url("../img/Logos/interfaces/icons/mostrar.png");
+  }
+}
+#loader {
+  width: 100%;
+  height: 100%;
+  background-color: #f8f4e8;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 10000;
+}
+#loader #box {
+  width: 50px;
+  height: 50px;
+  background: #261437;
+  animation: animate 0.5s linear infinite;
+  border-radius: 3px;
+}
+#loader #shadow {
+  width: 50px;
+  height: 5px;
+  background: #f2f0ed;
+  opacity: 0.1;
+  margin-top: 15px;
+  border-radius: 50%;
+  animation: shadow 0.5s linear infinite;
+}
+
+@media screen and (max-width: 500px) {
+  #loader #box {
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+  }
+  #loader #shadow {
+    width: 40px;
+    height: 4px;
+    margin-top: 15px;
+  }
+}
+@font-face {
+  font-family: "Null";
+  src: url(/fonts/Null.otf);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "OpenSauceOne";
+  src: url(/fonts/opens/OpenSauceOne-Black.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+@keyframes loader {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 110%;
+  }
+}
+@keyframes shadow {
+  50% {
+    transform: scale(1.2, 1);
+  }
+}
+@keyframes animate {
+  17% {
+    border-bottom-right-radius: 3px;
+  }
+  25% {
+    transform: translateY(9px) rotate(22.5deg);
+  }
+  50% {
+    transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+    border-bottom-right-radius: 40px;
+  }
+  75% {
+    transform: translateY(9px) rotate(67.5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+@keyframes reolad {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes moverGhost {
+  0% {
+    transform: translateX(0);
+    background-image: url("../img/mascotas/ghost_4.png");
+  }
+  49% {
+    transform: translateX(175%) translateY(27%);
+    background-image: url("../img/mascotas/ghost_4.png");
+  }
+  50% {
+    transform: translateX(175%) translateY(27%);
+    background-image: url("../img/mascotas/ghost_4.5.png");
+  }
+  100% {
+    transform: translateX(0);
+    background-image: url("../img/mascotas/ghost_4.5.png");
+    z-index: 100;
+  }
+}
+@keyframes mostrarPage {
+  0% {
+    background-image: url("../img/Logos/interfaces/icons/no_mostrar.png");
+  }
+  100% {
+    background-image: url("../img/Logos/interfaces/icons/mostrar.png");
+  }
+}
+@font-face {
+  font-family: "Null";
+  src: url(/fonts/Null.otf);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "OpenSauceOne";
+  src: url(/fonts/opens/OpenSauceOne-Black.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+html {
+  box-sizing: border-box;
+}
+
+.c-cursor {
+  --size: 15px;
+  position: fixed;
+  width: var(--size);
+  height: var(--size);
+  top: calc(var(--size) / -2);
+  left: calc(var(--size) / -2);
+  transform: translate(var(--cursor-x, -100px), var(--cursor-y, -100px)) translateZ(0);
+  pointer-events: none;
+  transition: none;
+  z-index: 150000;
+  will-change: transform;
+}
+.is-debug .c-cursor {
+  transition: all 0.2s ease-in-out;
+}
+.c-cursor__inner {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #171616;
+  border: 1px solid #f8f4e8;
+  transition: all 0.15s ease-in-out;
+  opacity: 1;
+  transform: scale(1) translateZ(0);
+}
+.c-cursor.is-clicked .c-cursor__inner {
+  opacity: 0.5;
+}
+.c-cursor.is-hidden .c-cursor__inner {
+  opacity: 0;
+}
+.c-cursor.is-link-hovered .c-cursor__inner {
+  transform: scale(0.75) translateZ(0);
+  background-color: #3e2356;
+}
+
+.has-custom-cursor,
+.has-custom-cursor * {
+  cursor: none !important;
+}
+
+@font-face {
+  font-family: "Null";
+  src: url(/fonts/Null.otf);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "OpenSauceOne";
+  src: url(/fonts/opens/OpenSauceOne-Black.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+* {
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+  width: 0px;
+}
+
+.log_letra {
+  cursor: pointer;
+  text-shadow: 2px 2px 0 #171616, -2px 2px 0 #171616, -2px -2px 0 #171616, 2px -2px 0 #171616;
+  transition: all 0.3s ease-in-out;
+}
+
+.log_letra:hover {
+  color: #3e2356;
+}
+
+.ocultar {
+  opacity: 0;
+  scale: 0;
+}
+
+body {
+  background-color: #f8f4e8;
+  display: flex;
+  overflow: hidden;
+}
+body #home {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #171616;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  transition: all 0.2s ease-in-out;
+}
+body #home .view_cont {
+  width: 40%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body #home .view_cont .view_log {
+  width: 100%;
+  height: 85%;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Null";
+  color: #f8f4e8;
+}
+body #home .view_cont .view_log .log_letras {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #home .view_cont .view_log .log_letras .log_letra {
+  cursor: pointer;
+  text-shadow: 4px 4px 0 #171616, -4px 4px 0 #171616, -4px -4px 0 #171616, 4px -4px 0 #171616;
+  transition: all 0.3s ease-in-out;
+}
+body #home .view_cont .view_log .log_letras .log_letra:hover {
+  color: #3e2356;
+}
+body #home .view_cont .view_log .log_letras #log_letra_1 {
+  font-size: 18vh;
+}
+body #home .view_cont .view_log .log_letras #log_letra_2 {
+  font-size: 13vh;
+  margin-left: -1.3vw;
+  margin-top: -3vh;
+}
+body #home .view_cont .view_log .log_letras #log_letra_3 {
+  font-size: 13vh;
+  margin-left: -1.3vw;
+  margin-top: 3vh;
+}
+body #home .view_cont .view_log .log_letras #log_letra_4 {
+  font-size: 13vh;
+  margin-left: -0.5vw;
+  margin-top: 2vh;
+}
+body #home .view_cont .view_log #log_letra_7 {
+  font-size: 1.2vh;
+  font-family: "OpenSauceOne";
+  letter-spacing: 0.25em;
+}
+body #home .view_cont .view_ghost {
+  width: 10%;
+  height: 20%;
+  z-index: 1;
+  margin-bottom: 13%;
+  margin-right: 17%;
+  position: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: moverGhost 8s ease-in-out infinite;
+}
+body #home .view_cont .view_btn {
+  width: 100%;
+  height: 10%;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #home .view_cont .view_btn .btn_view {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: #f8f4e8;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/Logos/interfaces/icons/no_mostrar.png");
+}
+body #home .view_cont .view_btn .btn_view:hover {
+  animation: mostrarPage 0s forwards;
+}
+body #home #audio {
+  display: none;
+}
+body header {
+  width: 10vw;
+  height: 100vh;
+  background-color: #171616;
+}
+body header nav {
+  width: 100%;
+  height: 100%;
+}
+body header nav .logo .view_cont {
+  width: 100%;
+  height: 30%;
+  margin-top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body header nav .logo .view_cont .view_log {
+  width: 100%;
+  height: 85%;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Null";
+  color: #f8f4e8;
+}
+body header nav .logo .view_cont .view_log .log_letras {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body header nav .logo .view_cont .view_log .log_letras #log_letra_1 {
+  font-size: 8vh;
+}
+body header nav .logo .view_cont .view_log .log_letras #log_letra_2 {
+  font-size: 5vh;
+  margin-left: -0.5vw;
+  margin-top: -2vh;
+}
+body header nav .logo .view_cont .view_log .log_letras #log_letra_3 {
+  font-size: 5vh;
+  margin-left: -0.5vw;
+  margin-top: 1vh;
+}
+body header nav .logo .view_cont .view_log .log_letras #log_letra_4 {
+  font-size: 5vh;
+  margin-left: -0.3vw;
+  margin-top: 0vh;
+}
+body header nav .logo .view_cont .view_log #log_letra_7 {
+  font-size: 0.7vh;
+  font-family: "OpenSauceOne";
+  letter-spacing: 0.25em;
+}
+body header nav .logo .view_cont .view_ghost {
+  width: 5%;
+  height: 10%;
+  z-index: 1;
+  margin-bottom: 5%;
+  margin-right: 9%;
+  position: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: moverGhost 8s ease-in-out infinite;
+}
+body header nav ul {
+  width: 100%;
+  height: 50%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  margin-top: 35%;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+body header nav ul li {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body header nav ul li button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  justify-content: center;
+  align-items: center;
+}
+body header nav ul li button img {
+  width: 100%;
+  height: 100%;
+}
+body main {
+  width: 90vw;
+  height: 100vh;
+  z-index: 1;
+}
+body main .pages {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+body main #pag1 .pag_cont {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+body main #pag1 .pag_cont .proyecto {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  background-color: #171616;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body main #pag1 .pag_cont .proyecto .proyecto_img {
+  width: 100%;
+  height: 80%;
+}
+body main #pag1 .pag_cont .proyecto .proyecto_img a img {
+  width: 100%;
+  height: 100%;
+}
+body main #pag1 .pag_cont .proyecto .proyecto_info {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  background-color: #0d0d0d;
+  justify-content: space-between;
+  align-items: center;
+}
+body main #pag1 .pag_cont .proyecto .proyecto_info .proyecto_info_text {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+}
+body main #pag1 .pag_cont .proyecto .proyecto_info .proyecto_info_text span {
+  font-family: "OpenSauceOne";
+  margin: 2%;
+  color: #f8f4e8;
+  font-size: 2vh;
+}
+body main #pag1 .pag_cont .proyecto .proyecto_info .proyecto_info_text .proyecto_info_skills {
+  height: 35%;
+  margin: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main #pag1 .pag_cont .proyecto .proyecto_info .proyecto_info_text .proyecto_info_skills img {
+  width: 100%;
+  height: 100%;
+}
+body main #pag1 .pag_cont .proyecto .proyecto_info .proyecto_links {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+body main #pag1 .pag_cont .proyecto .proyecto_info .proyecto_links a {
+  height: 30%;
+}
+body main #pag1 .pag_cont .proyecto .proyecto_info .proyecto_links a img {
+  width: 100%;
+  height: 100%;
+}
+body main #pag2 {
+  width: 100%;
+  height: 100%;
+  justify-items: center;
+  align-items: center;
+}
+body main .agregar_dis {
+  display: flex;
+}
+body main .remover_dis {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
