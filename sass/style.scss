@@ -260,6 +260,9 @@ body {
             }
           }
         }
+        li:hover {
+          @include opacity;
+        }
       }
     }
   }
@@ -268,8 +271,11 @@ body {
     height: 100vh;
     z-index: 1;
     .pages {
-      width: 100%;
-      height: 100%;
+      @include cover;
+      justify-items: center;
+      align-items: center;
+      justify-content: center;
+      align-items: center;
       display: none;
     }
     #pag1 {
@@ -347,16 +353,171 @@ body {
       }
     }
     #pag2 {
-      width: 100%;
-      height: 100%;
-      justify-items: center;
-      align-items: center;
+      .pag2_cont {
+        width: 100%;
+        height: 85%;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 3%;
+        .pag2_opciones {
+          width: 90%;
+          height: 31.33%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          background-color: $Principal;
+          span {
+            font-family: $Letra2;
+            color: $Texto;
+            font-size: 2vh;
+            margin-bottom: 2%;
+          }
+          .pag2_opciones_img {
+            width: 100%;
+            height: 70%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            img {
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+    #pag3 {
+      .pag3_telefono {
+        width: 50%;
+        height: 50%;
+        display: flex;
+        transform: rotate(-10deg);
+        justify-content: center;
+        align-items: center;
+        img {
+          height: 100%;
+        }
+      }
+      .pag3_texto {
+        width: 20%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 2%;
+        background-color: $Principal;
+        h2 {
+          font-family: $Letra2;
+          color: $Texto;
+          font-size: 2vh;
+          text-align: center;
+        }
+        p {
+          font-family: $Letra2;
+          color: $Texto;
+          font-size: 1.5vh;
+          text-align: center;
+        }
+      }
+      .animacion1pag3{
+        animation: animacion1pag3 0.5s ease-in-out forwards;
+      }
+      .animacion2pag3{
+        animation: animacion2pag3 0.5s ease-in-out forwards;
+      }
+    }
+    #pag4 {
+      .nav_contacto {
+        width: 5%;
+        height: 25%;
+        background-color: $Principal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2%;
+        button {
+          width: 100%;
+          height: 20%;
+          display: flex;
+          background-color: $Transparente;
+          border: none;
+          padding: 0;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          img {
+            height: 70%;
+          }
+        }
+        button:hover {
+          @include opacity;
+        }
+      }
+      .nav_cont {
+        width: 50%;
+        height: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 5%;
+        .nav_cont_contacto {
+          width: 100%;
+          height: 100%;
+          display: none;
+          justify-content: center;
+          background-color: $Principal;
+          align-items: center;
+          flex-direction: column;
+          div {
+            width: 40%;
+            height: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: $Negro;
+            transition: all 0.3s ease-in-out;
+            border-radius: 1rem;
+            a {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              text-decoration: none;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              span {
+                height: 45%;
+                font-family: $Letra2;
+                color: $Texto;
+                letter-spacing: 0.2rem;
+                font-size: 1.5vh;
+                display: flex;
+                align-items: center;
+                img {
+                  height: 80%;
+                  display: flex;
+                  align-items: center;
+                }
+              }
+            }
+            &:hover {
+              @include opacity;
+            }
+          }
+        }
+        .agregar_dis {
+          display: flex;
+        }
+      }
     }
     .agregar_dis {
       display: flex;
-    }
-    .remover_dis {
-      display: none;
     }
   }
 }

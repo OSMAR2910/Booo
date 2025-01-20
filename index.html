@@ -10,8 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#171616-" />
     <meta name="msapplication-navbutton-color" content="#171616-" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="#171616-" />
-    <title>Booo</title>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#171616-" />   
+     <title>Booo</title>
 </head>
 <body>
     <section id="js-elementos">
@@ -42,7 +42,7 @@
             </div>
         </div>
         <audio id="audio" controls>
-            <source type="audio/mp3" src="sound/GhostSoundEffect.mp3">
+            <source type="audio/mp3" src="sound/click.mp3">
         </audio>
     </section>
     <header>
@@ -230,36 +230,103 @@
             </div>
         </section>
         <section class="pages" id="pag2">
-            <div class="lenguajes">
-                <span>Lenguajes</span>
-                <div class="lenguajes_img">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
+            <div class="pag2_cont"> 
+                <div class="pag2_opciones">
+                    <span>Lenguajes</span>
+                    <div class="pag2_opciones_img">
+                        <img src="img/Logos/interfaces/icons/html-5.png" alt="html">
+                        <img src="img/Logos/interfaces/icons/css-3.png" alt="css">
+                        <img src="img/Logos/interfaces/icons/js.png" alt="javascript">
+                        <img src="img/Logos/interfaces/icons/c++.png" alt="c++">
+                    </div>
                 </div>
-            </div>
-            <div class="herramientas">
-                <span>Herramientas</span>
-                <div class="herramientas_img">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
+                <div class="pag2_opciones">
+                    <span>Herramientas</span>
+                    <div class="pag2_opciones_img">
+                        <img src="img/Logos/interfaces/icons/firebase-svgrepo-com.png" alt="firebase">
+                        <img src="img/Logos/interfaces/icons/react.png" alt="react">
+                        <img src="img/Logos/interfaces/icons/sass.png" alt="sass">
+                    </div>
                 </div>
-            </div>
-            <div class="sofware">
-                <span>Software</span>
-                <div class="sofware_img">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
+                <div class="pag2_opciones">
+                    <span>Software</span>
+                    <div class="pag2_opciones_img">
+                        <img src="img/Logos/interfaces/icons/arduino.png" alt="arduino">
+                        <img src="img/Logos/interfaces/icons/github.png" alt="github">
+                        <img src="img/Logos/interfaces/icons/gimp.png" alt="gimp">
+                        <img src="img/Logos/interfaces/icons/ps.png" alt="photoshop">    
+                        <img src="img/Logos/interfaces/icons/vscode.png" alt="vscode">
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="pages" id="pag3"></section>
-        <section class="pages" id="pag4"></section>
+        <section class="pages" id="pag3">
+            <div class="pag3_telefono" id="pag3_telefono">
+                <img src="img/Logos/interfaces/telefono-inteligente.png" alt="telefono inteligente">
+            </div>
+            <div class="pag3_texto" id="pag3_texto">
+                <h2>Buen maanejo del "Responsive"</h2>
+                <p>En "Booo" se puede ver el "Responsive" de la aplicación, es decir, que se puede ver la aplicación en distintos dispositivos, como celulares, tabletas, ordenadores, etc.</p>
+            </div>
+        </section>
+        <section class="pages" id="pag4">
+            <div class="nav_contacto">
+                <button onclick="btn_whatsapp()">
+                    <img src="img/Logos/interfaces/contacto/whatsapp.png" alt="whatsapp">
+                </button>
+                <button onclick="btn_correo()">
+                    <img src="img/Logos/interfaces/contacto/correo-electronico.png" alt="correo electronico">
+                </button>
+                <button onclick="btn_instagram()">
+                    <img src="img/Logos/interfaces/contacto/instagram.png" alt="instagram">
+                </button>
+                <button onclick="btn_cv()">
+                    <img src="img/Logos/interfaces/contacto/cv.png" alt="cv">
+                </button>
+            </div>
+            <div class="nav_cont">
+                <div class="nav_cont_contacto" id="cont_whatsapp">
+                    <div>
+                        <a href="https://api.whatsapp.com/send?phone=6632238153" target="_blank">
+                            <span>
+                                <img src="img/Logos/interfaces/contacto/whatsapp.png" alt="whatsapp">
+                            </span>
+                            <span>Enviar mensaje</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav_cont_contacto" id="cont_correo">
+                    <div>
+                        <a href="mailto:osmar.sifuentes.2910@gmail.com" target="_blank">
+                            <span>
+                                <img src="img/Logos/interfaces/contacto/correo-electronico.png" alt="correo electronico">
+                            </span>
+                            <span>Enviar mensaje</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav_cont_contacto" id="cont_instagram">
+                    <div>
+                        <a href="https://www.instagram.com/powr__toch/" target="_blank">
+                            <span>
+                                <img src="img/Logos/interfaces/contacto/instagram.png" alt="instagram">
+                            </span>
+                            <span>Enviar mensaje</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav_cont_contacto" id="cont_cv">
+                    <div>
+                        <a href="img/Curriculum.pdf" target="_blank">
+                            <span>
+                                <img src="img/Logos/interfaces/contacto/cv.png" alt="cv">
+                            </span>
+                            <span>Ver CV</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <script src="js/main.js"></script>
 </body>

@@ -516,6 +516,10 @@ body header nav ul li button img {
   width: 100%;
   height: 100%;
 }
+body header nav ul li:hover {
+  opacity: 50%;
+  scale: 0.9;
+}
 body main {
   width: 90vw;
   height: 100vh;
@@ -524,6 +528,10 @@ body main {
 body main .pages {
   width: 100%;
   height: 100%;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
   display: none;
 }
 body main #pag1 .pag_cont {
@@ -599,15 +607,166 @@ body main #pag1 .pag_cont .proyecto .proyecto_info .proyecto_links a img {
   width: 100%;
   height: 100%;
 }
-body main #pag2 {
+body main #pag2 .pag2_cont {
   width: 100%;
-  height: 100%;
+  height: 85%;
+  display: flex;
   justify-items: center;
   align-items: center;
+  flex-direction: column;
+  gap: 3%;
+}
+body main #pag2 .pag2_cont .pag2_opciones {
+  width: 90%;
+  height: 31.33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #171616;
+}
+body main #pag2 .pag2_cont .pag2_opciones span {
+  font-family: "OpenSauceOne";
+  color: #f8f4e8;
+  font-size: 2vh;
+  margin-bottom: 2%;
+}
+body main #pag2 .pag2_cont .pag2_opciones .pag2_opciones_img {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body main #pag2 .pag2_cont .pag2_opciones .pag2_opciones_img img {
+  height: 100%;
+}
+body main #pag3 .pag3_telefono {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  transform: rotate(-10deg);
+  justify-content: center;
+  align-items: center;
+}
+body main #pag3 .pag3_telefono img {
+  height: 100%;
+}
+body main #pag3 .pag3_texto {
+  width: 20%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2%;
+  background-color: #171616;
+}
+body main #pag3 .pag3_texto h2 {
+  font-family: "OpenSauceOne";
+  color: #f8f4e8;
+  font-size: 2vh;
+  text-align: center;
+}
+body main #pag3 .pag3_texto p {
+  font-family: "OpenSauceOne";
+  color: #f8f4e8;
+  font-size: 1.5vh;
+  text-align: center;
+}
+body main #pag3 .animacion1pag3 {
+  animation: animacion1pag3 0.5s ease-in-out forwards;
+}
+body main #pag3 .animacion2pag3 {
+  animation: animacion2pag3 0.5s ease-in-out forwards;
+}
+body main #pag4 .nav_contacto {
+  width: 5%;
+  height: 25%;
+  background-color: #171616;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2%;
+}
+body main #pag4 .nav_contacto button {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body main #pag4 .nav_contacto button img {
+  height: 70%;
+}
+body main #pag4 .nav_contacto button:hover {
+  opacity: 50%;
+  scale: 0.9;
+}
+body main #pag4 .nav_cont {
+  width: 50%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 5%;
+}
+body main #pag4 .nav_cont .nav_cont_contacto {
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  background-color: #171616;
+  align-items: center;
+  flex-direction: column;
+}
+body main #pag4 .nav_cont .nav_cont_contacto div {
+  width: 40%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #0d0d0d;
+  transition: all 0.3s ease-in-out;
+  border-radius: 1rem;
+}
+body main #pag4 .nav_cont .nav_cont_contacto div a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body main #pag4 .nav_cont .nav_cont_contacto div a span {
+  height: 45%;
+  font-family: "OpenSauceOne";
+  color: #f8f4e8;
+  letter-spacing: 0.2rem;
+  font-size: 1.5vh;
+  display: flex;
+  align-items: center;
+}
+body main #pag4 .nav_cont .nav_cont_contacto div a span img {
+  height: 80%;
+  display: flex;
+  align-items: center;
+}
+body main #pag4 .nav_cont .nav_cont_contacto div:hover {
+  opacity: 50%;
+  scale: 0.9;
+}
+body main #pag4 .nav_cont .agregar_dis {
+  display: flex;
 }
 body main .agregar_dis {
   display: flex;
-}
-body main .remover_dis {
-  display: none;
 }/*# sourceMappingURL=style.css.map */

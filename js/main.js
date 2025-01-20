@@ -46,8 +46,10 @@ if (!isTouchDevice()) {
 function btn_view() {
     const home = document.getElementById("home");
     home.classList.add("ocultar");
+    const audio = document.getElementById('audio');
+    audio.volume = .3;
+    audio.play();
 }    
-
 // Cambiar secciones navigation
 document.getElementById('pag1').classList.add('agregar_dis');
 const sections = {
@@ -61,7 +63,6 @@ const toggleSection = (activeSection) => {
     Object.entries(sections).forEach(([key, section]) => {
         section.classList.toggle('agregar_dis', key === activeSection);
         const audio = document.getElementById('audio');
-        audio.pause();
         audio.volume = .3;
         audio.play();
     });
@@ -72,3 +73,33 @@ const btnnav_skills = () => toggleSection('skills');
 const btnnav_responsive = () => toggleSection('responsivo');
 const btnnav_info = () => toggleSection('info');
 
+// Cambiar secciones productos
+const alimentos = [
+    "whatsapp",
+    "correo",
+    "instagram",
+    "cv",
+  ];
+  
+  function activateCategory(category) {
+    alimentos.forEach(cat => {
+      const element = document.getElementById(`cont_${cat}`);
+      if (cat === category) {
+        element.classList.add("agregar_dis");
+        const audio = document.getElementById('audio');
+        audio.volume = .3;
+        audio.play();
+      } else {
+        element.classList.remove("agregar_dis");
+      }
+    });
+  }
+  
+  // Uso de las funciones
+  document.getElementById('cont_whatsapp').classList.add('agregar_dis');
+  
+  // Ejemplos de llamadas
+  function btn_whatsapp() { activateCategory("whatsapp"); }
+  function btn_correo() { activateCategory("correo"); }
+  function btn_instagram() { activateCategory("instagram"); }
+  function btn_cv() { activateCategory("cv"); }
