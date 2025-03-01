@@ -46,11 +46,3 @@
       z-index: 100;
     }
   }
-  @keyframes mostrarPage {
-    0% {
-      background-image: url("../img/Logos/interfaces/icons/no_mostrar.png");
-    }
-    100% {
-      background-image: url("../img/Logos/interfaces/icons/mostrar.png");
-    }
-  }

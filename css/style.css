@@ -80,29 +80,22 @@
     z-index: 100;
   }
 }
-@keyframes mostrarPage {
-  0% {
-    background-image: url("../img/Logos/interfaces/icons/no_mostrar.png");
-  }
-  100% {
-    background-image: url("../img/Logos/interfaces/icons/mostrar.png");
-  }
-}
 #loader {
   width: 100%;
   height: 100%;
-  background-color: #f8f4e8;
+  background-color: #2b2929;
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   position: fixed;
+  top: 0;
   z-index: 10000;
 }
 #loader #box {
   width: 50px;
   height: 50px;
-  background: #261437;
+  background: #dbd8cc;
   animation: animate 0.5s linear infinite;
   border-radius: 3px;
 }
@@ -198,14 +191,6 @@
     z-index: 100;
   }
 }
-@keyframes mostrarPage {
-  0% {
-    background-image: url("../img/Logos/interfaces/icons/no_mostrar.png");
-  }
-  100% {
-    background-image: url("../img/Logos/interfaces/icons/mostrar.png");
-  }
-}
 @font-face {
   font-family: "Null";
   src: url(/fonts/Null.otf);
@@ -243,8 +228,8 @@ html {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #171616;
-  border: 1px solid #f8f4e8;
+  background-color: #f8f4e8;
+  border: 1px solid #2b2929;
   transition: all 0.15s ease-in-out;
   opacity: 1;
   transform: scale(1) translateZ(0);
@@ -257,7 +242,7 @@ html {
 }
 .c-cursor.is-link-hovered .c-cursor__inner {
   transform: scale(0.75) translateZ(0);
-  background-color: #3e2356;
+  background-color: #dbd8cc;
 }
 
 .has-custom-cursor,
@@ -287,30 +272,32 @@ html {
 
 .log_letra {
   cursor: pointer;
-  text-shadow: 2px 2px 0 #171616, -2px 2px 0 #171616, -2px -2px 0 #171616, 2px -2px 0 #171616;
+  text-shadow: 2px 2px 0 #f8f4e8, -2px 2px 0 #f8f4e8, -2px -2px 0 #f8f4e8, 2px -2px 0 #f8f4e8;
   transition: all 0.3s ease-in-out;
 }
 
 .log_letra:hover {
-  color: #3e2356;
+  color: #dbd8cc;
 }
 
 .ocultar {
-  opacity: 0;
-  scale: 0;
+  animation: backOutUp 0.5s ease-in-out forwards;
+  border-radius: 5vw;
 }
 
 body {
-  background-color: #f8f4e8;
+  background-color: #2b2929;
   display: flex;
   overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 body #home {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
-  background-color: #171616;
+  background-color: #f8f4e8;
   align-items: center;
   position: fixed;
   z-index: 1000;
@@ -333,7 +320,7 @@ body #home .view_cont .view_log {
   align-items: center;
   flex-direction: column;
   font-family: "Null";
-  color: #f8f4e8;
+  color: #2b2929;
 }
 body #home .view_cont .view_log .log_letras {
   width: 100%;
@@ -344,11 +331,11 @@ body #home .view_cont .view_log .log_letras {
 }
 body #home .view_cont .view_log .log_letras .log_letra {
   cursor: pointer;
-  text-shadow: 4px 4px 0 #171616, -4px 4px 0 #171616, -4px -4px 0 #171616, 4px -4px 0 #171616;
+  text-shadow: 4px 4px 0 #f8f4e8, -4px 4px 0 #f8f4e8, -4px -4px 0 #f8f4e8, 4px -4px 0 #f8f4e8;
   transition: all 0.3s ease-in-out;
 }
 body #home .view_cont .view_log .log_letras .log_letra:hover {
-  color: #3e2356;
+  color: #dbd8cc;
 }
 body #home .view_cont .view_log .log_letras #log_letra_1 {
   font-size: 18vh;
@@ -403,22 +390,25 @@ body #home .view_cont .view_btn .btn_view {
   border: none;
   padding: 0;
   margin: 0;
-  background-color: #f8f4e8;
-  background-size: cover;
+  background-color: #2b2929;
+  background-size: 90%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("../img/Logos/interfaces/icons/no_mostrar.png");
+  background-image: url("../img/Logos/interfaces/icons/no_mostrar.svg");
+  transition: all 0.3s ease-in-out;
 }
 body #home .view_cont .view_btn .btn_view:hover {
-  animation: mostrarPage 0s forwards;
+  background-image: url("../img/Logos/interfaces/icons/mostrar.svg");
 }
 body #home #audio {
   display: none;
 }
 body header {
-  width: 10vw;
-  height: 100vh;
-  background-color: #171616;
+  width: 8vw;
+  margin: 1vw;
+  height: 80vh;
+  border-radius: 2vw;
+  background-color: #f8f4e8;
 }
 body header nav {
   width: 100%;
@@ -442,7 +432,7 @@ body header nav .logo .view_cont .view_log {
   align-items: center;
   flex-direction: column;
   font-family: "Null";
-  color: #f8f4e8;
+  color: #2b2929;
 }
 body header nav .logo .view_cont .view_log .log_letras {
   width: 100%;
@@ -498,7 +488,8 @@ body header nav ul {
   flex-direction: column;
 }
 body header nav ul li {
-  width: 30%;
+  width: 90%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -511,21 +502,43 @@ body header nav ul li button {
   border: none;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-body header nav ul li button img {
-  width: 100%;
-  height: 100%;
+body header nav ul li button p {
+  transform: rotate(-15deg);
+  font-family: "OpenSauceOne";
+  color: #2b2929;
+  font-size: 0.8vw;
+  text-align: center;
+  margin: 2%;
+  transition: all 0.2s ease-in-out;
 }
-body header nav ul li:hover {
-  opacity: 50%;
-  scale: 0.9;
+body header nav ul li button .line_nav {
+  transform: rotate(-15deg);
+  width: 90%;
+  height: 5px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  scale: 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2vw;
+  background-color: #dbd8cc;
+}
+body header nav ul li:hover button p {
+  font-size: 1vw;
+}
+body header nav ul li:hover button .line_nav {
+  scale: 1;
 }
 body main {
   width: 90vw;
   height: 100vh;
   z-index: 1;
+  overflow: hidden;
 }
 body main .pages {
+  animation: fadeInDown 0.3s ease-in-out forwards;
   width: 100%;
   height: 100%;
   justify-items: center;
@@ -536,7 +549,7 @@ body main .pages {
 }
 body main #pag1 .pag_cont {
   width: 100%;
-  height: 100%;
+  height: 90%;
   display: grid;
   justify-items: center;
   align-items: center;
@@ -544,9 +557,11 @@ body main #pag1 .pag_cont {
 }
 body main #pag1 .pag_cont .proyecto {
   width: 90%;
-  height: 90%;
+  height: 85%;
+  border-radius: 1vw;
+  overflow: hidden;
   display: flex;
-  background-color: #171616;
+  background-color: #dbd8cc;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -555,7 +570,7 @@ body main #pag1 .pag_cont .proyecto .proyecto_img {
   width: 100%;
   height: 80%;
 }
-body main #pag1 .pag_cont .proyecto .proyecto_img a img {
+body main #pag1 .pag_cont .proyecto .proyecto_img img {
   width: 100%;
   height: 100%;
 }
@@ -563,7 +578,7 @@ body main #pag1 .pag_cont .proyecto .proyecto_info {
   width: 100%;
   height: 20%;
   display: flex;
-  background-color: #0d0d0d;
+  background-color: #f8f4e8;
   justify-content: space-between;
   align-items: center;
 }
@@ -578,34 +593,40 @@ body main #pag1 .pag_cont .proyecto .proyecto_info .proyecto_info_text {
 body main #pag1 .pag_cont .proyecto .proyecto_info .proyecto_info_text span {
   font-family: "OpenSauceOne";
   margin: 2%;
-  color: #f8f4e8;
+  color: #2b2929;
   font-size: 2vh;
 }
 body main #pag1 .pag_cont .proyecto .proyecto_info .proyecto_info_text .proyecto_info_skills {
+  width: 50%;
   height: 35%;
   margin: 2%;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  gap: 5%;
 }
 body main #pag1 .pag_cont .proyecto .proyecto_info .proyecto_info_text .proyecto_info_skills img {
-  width: 100%;
   height: 100%;
 }
 body main #pag1 .pag_cont .proyecto .proyecto_info .proyecto_links {
   width: 30%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   gap: 10%;
+  padding: 5%;
 }
 body main #pag1 .pag_cont .proyecto .proyecto_info .proyecto_links a {
   height: 30%;
+  transition: all 0.3s ease-in-out;
 }
 body main #pag1 .pag_cont .proyecto .proyecto_info .proyecto_links a img {
   width: 100%;
   height: 100%;
+}
+body main #pag1 .pag_cont .proyecto .proyecto_info .proyecto_links a:hover {
+  filter: brightness(120%);
 }
 body main #pag2 .pag2_cont {
   width: 100%;
@@ -617,17 +638,18 @@ body main #pag2 .pag2_cont {
   gap: 3%;
 }
 body main #pag2 .pag2_cont .pag2_opciones {
-  width: 90%;
+  width: 95%;
   height: 31.33%;
+  border-radius: 1vw;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #171616;
+  background-color: #f8f4e8;
 }
 body main #pag2 .pag2_cont .pag2_opciones span {
   font-family: "OpenSauceOne";
-  color: #f8f4e8;
+  color: #2b2929;
   font-size: 2vh;
   margin-bottom: 2%;
 }
@@ -638,56 +660,161 @@ body main #pag2 .pag2_cont .pag2_opciones .pag2_opciones_img {
   justify-content: space-around;
   align-items: center;
 }
-body main #pag2 .pag2_cont .pag2_opciones .pag2_opciones_img img {
+body main #pag2 .pag2_cont .pag2_opciones .pag2_opciones_img div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+body main #pag2 .pag2_cont .pag2_opciones .pag2_opciones_img div img {
   height: 100%;
 }
-body main #pag3 .pag3_telefono {
-  width: 50%;
-  height: 50%;
+body main #pag2 .pag2_cont .pag2_opciones .pag2_opciones_img div p {
+  opacity: 0;
+  visibility: hidden;
+  width: auto;
+  font-family: "OpenSauceOne";
+  color: #2b2929;
+  font-size: 1.5vh;
+  text-align: center;
+  position: absolute;
+  padding: 3% 8%;
+  margin: 0;
+  background-color: #dbd8cc;
+  border-radius: 1vw;
+  top: -5vh;
+  transition: all 0.3s ease-in-out;
+}
+body main #pag2 .pag2_cont .pag2_opciones .pag2_opciones_img div:hover p {
+  visibility: visible;
+  opacity: 1;
+}
+body main #pag3 .pag3_cont {
+  width: 95%;
+  height: 95%;
+  background-color: #f8f4e8;
+  border-radius: 2vw;
   display: flex;
-  transform: rotate(-10deg);
+  justify-content: space-evenly;
+  align-items: center;
+}
+body main #pag3 .pag3_cont .cont_dispositivo {
+  width: 20%;
+  height: 80%;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
-body main #pag3 .pag3_telefono img {
+body main #pag3 .pag3_cont .cont_dispositivo .web {
+  width: 100%;
   height: 100%;
+  border-radius: 1vw;
 }
-body main #pag3 .pag3_texto {
-  width: 20%;
-  height: 20%;
+body main #pag3 .pag3_cont .cont_opcion {
+  width: 25%;
+  height: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 2%;
-  background-color: #171616;
+  background-color: #dbd8cc;
+  border-radius: 1vw;
 }
-body main #pag3 .pag3_texto h2 {
+body main #pag3 .pag3_cont .cont_opcion .dispositivo {
+  width: 95%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+body main #pag3 .pag3_cont .cont_opcion .dispositivo button {
+  width: 50%;
+  height: 90%;
+  display: flex;
+  background-color: #f8f4e8;
+  border: none;
+  border-radius: 2vw;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  color: #2b2929;
+  transition: all 0.2s ease-in-out;
+}
+body main #pag3 .pag3_cont .cont_opcion .dispositivo button span {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
   font-family: "OpenSauceOne";
-  color: #f8f4e8;
-  font-size: 2vh;
-  text-align: center;
+  font-size: 1vw;
+  letter-spacing: 0.2vw;
 }
-body main #pag3 .pag3_texto p {
+body main #pag3 .pag3_cont .cont_opcion .dispositivo button:hover {
+  background-color: #2b2929;
+  color: #f8f4e8;
+}
+body main #pag3 .pag3_cont .cont_opcion .webs {
+  width: 90%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: start;
+  gap: 5%;
+  padding: 5%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+body main #pag3 .pag3_cont .cont_opcion .webs button {
+  width: 100%;
+  height: 4.5vh;
+  display: flex;
+  background-color: #f8f4e8;
+  border: none;
+  border-radius: 2vw;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  color: #2b2929;
+  transition: all 0.2s ease-in-out;
+}
+body main #pag3 .pag3_cont .cont_opcion .webs button span {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
   font-family: "OpenSauceOne";
+  font-size: 0.7vw;
+  letter-spacing: 0.2vw;
+}
+body main #pag3 .pag3_cont .cont_opcion .webs button:hover {
+  background-color: #2b2929;
   color: #f8f4e8;
-  font-size: 1.5vh;
-  text-align: center;
 }
-body main #pag3 .animacion1pag3 {
-  animation: animacion1pag3 0.5s ease-in-out forwards;
+body main #pag3 .pag3_cont .style_telefono {
+  width: 20%;
+  height: 80%;
 }
-body main #pag3 .animacion2pag3 {
-  animation: animacion2pag3 0.5s ease-in-out forwards;
+body main #pag3 .pag3_cont .style_pc {
+  width: 65%;
+  height: 65%;
 }
 body main #pag4 .nav_contacto {
   width: 5%;
   height: 25%;
-  background-color: #171616;
+  background-color: #f8f4e8;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 1vw;
   gap: 2%;
 }
 body main #pag4 .nav_contacto button {
@@ -716,14 +843,16 @@ body main #pag4 .nav_cont {
   align-items: center;
   flex-direction: column;
   margin-left: 5%;
+  border-radius: 1vw;
 }
 body main #pag4 .nav_cont .nav_cont_contacto {
   width: 100%;
   height: 100%;
   display: none;
   justify-content: center;
-  background-color: #171616;
+  background-color: #f8f4e8;
   align-items: center;
+  border-radius: 1vw;
   flex-direction: column;
 }
 body main #pag4 .nav_cont .nav_cont_contacto div {
@@ -733,9 +862,9 @@ body main #pag4 .nav_cont .nav_cont_contacto div {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #0d0d0d;
+  background-color: #dbd8cc;
   transition: all 0.3s ease-in-out;
-  border-radius: 1rem;
+  border-radius: 1vw;
 }
 body main #pag4 .nav_cont .nav_cont_contacto div a {
   width: 100%;
@@ -749,7 +878,7 @@ body main #pag4 .nav_cont .nav_cont_contacto div a {
 body main #pag4 .nav_cont .nav_cont_contacto div a span {
   height: 45%;
   font-family: "OpenSauceOne";
-  color: #f8f4e8;
+  color: #2b2929;
   letter-spacing: 0.2rem;
   font-size: 1.5vh;
   display: flex;
