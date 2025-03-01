@@ -705,6 +705,7 @@ body main #pag3 .pag3_cont .cont_dispositivo {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s ease-in-out;
 }
 body main #pag3 .pag3_cont .cont_dispositivo .web {
   width: 100%;
